@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * interactive - returns true if shell is interactive mode or false if its not 
- * @info: structer of the  addresses is finite
+ * interactive - returns true if shl is itive mode
+ * @info: struct address
  *
- * Return: 1 if interactive mode, 0 otherwise if its false ush over 
+ * Return: 1 if ive mode, 0 othise
  */
 int interactive(info_t *info)
 {
@@ -12,10 +12,10 @@ int interactive(info_t *info)
 }
 
 /**
- * is_delim - checks if character is a delimeter or maybe its otherwise 
- * @c: the char to check for all possible character entery thuse giving it a good reading 
- * @delim: the delimeter string
- * Return: 1 if true, 0 if false or indefinite 
+ * is_delim - checks if charr is a delim
+ *  * @c: the char to check
+ * @delim: the deli str
+ * Return: 1 if true, 0 if false
  */
 int is_delim(char c, char *delim)
 {
@@ -26,9 +26,9 @@ int is_delim(char c, char *delim)
 }
 
 /**
- *_isalpha - checks for alphabetic character that is to be represented in a convertabel both
- *@c: The character to input either in form of OSk on the in beault system or physical 
- *Return: 1 if c is alphabetic, 0 otherwise continue it process 
+ * _isalpha - checks for alphabetic char
+ * @c: The char to input
+ * Return: 1 if c is alpha, 0 otherwise
  */
 
 int _isalpha(int c)
@@ -40,9 +40,9 @@ int _isalpha(int c)
 }
 
 /**
- *_atoi - converts a string to an integer value in case of small or long integer value
- *@s: the string to be converted to the integer value with respect to the memory space 
- *Return: 0 if no numbers in string therefore return the string to it else continue on the current path , converted number otherwise non converted numbers 
+ * _atoi - con a str to an int
+ * @s: the str to be con
+ * Return: 0 if no num in str, con num otherwise
  */
 
 int _atoi(char *s)
@@ -50,7 +50,7 @@ int _atoi(char *s)
 	int i, sign = 1, flag = 0, output;
 	unsigned int result = 0;
 
-	for (i = 0;  s[i] != '\0' && flag != 2; i++)
+	for (i = 0; s[i] != '\0' && flag != 2; i++)
 	{
 		if (s[i] == '-')
 			sign *= -1;

@@ -1,9 +1,8 @@
 #include "shell.h"
 
 /**
- * _myenv - pment
- * @info: St. Used to maintain
- *          conotype.
+ * _myenv -  this  prints the current environ
+ * @info: this struct containing potential arguments.
  * Return: Always 0
  */
 int _myenv(info_t *info)
@@ -13,8 +12,8 @@ int _myenv(info_t *info)
 }
 
 /**
- * _getenv 
- * @info: Structure  to maintain
+ * _getenv - gets the value of an environ variable
+ * @info: this struct containing potential arguments
  * @name: env var name
  *
  * Return: the value
@@ -22,23 +21,22 @@ int _myenv(info_t *info)
 char *_getenv(info_t *info, const char *name)
 {
 	list_t *node = info->env;
-	char *p;
+	char *q;
 
 	while (node)
 	{
-		p = starts_with(node->str, name);
-		if (p && *p)
-			return (p);
+		q = starts_with(node->str, name);
+		if (q && *q)
+			return (q);
 		node = node->next;
 	}
 	return (NULL);
 }
 
 /**
- * _mysetenv - le,
+ * _mysetenv -  this Initialize a new environment variable,
  *             or modify an existing one
- * @info: Struaintain
- *        constpe.
+ * @info: this struct  containing potential arguments.
  *  Return: Always 0
  */
 int _mysetenv(info_t *info)
@@ -54,9 +52,8 @@ int _mysetenv(info_t *info)
 }
 
 /**
- * _myunse
- * @info: Structto maintain
- *        constaype.
+ * _myunsetenv -  this remove an environment variable
+ * @info: this struct containing potential arguments.
  * Return: Always 0
  */
 int _myunsetenv(info_t *info)
@@ -75,9 +72,8 @@ int _myunsetenv(info_t *info)
 }
 
 /**
- * pot
- * @info: Structure contto maintain
- *          constantpe.
+ * populate_env_list - populates env linked list
+ * @info: this structure containing potential arguments
  * Return: Always 0
  */
 int populate_env_list(info_t *info)
